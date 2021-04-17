@@ -1,0 +1,250 @@
+body {
+	background: #435a6b;
+	margin: 5px;
+}
+
+div {
+	clear: both;
+	background: #FFF;
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 10px;
+	overflow: auto; /*Чтобы ничего не вылазило за рамки DIV'а*/
+	/*border-radius: 10px;*/
+}
+
+h1 a{
+    font-size: 28px;
+    font-family: Monaco, Courier, monospace;
+    color: #618ad2;
+	text-shadow: 2px 2px 0 #ccc;
+	margin-top: 0px;
+    transition: color .5s;
+}
+
+h1 a:hover,
+h1 a:focus {
+	text-decoration: none;
+}
+
+a {
+	text-decoration: none;
+	color: blue;
+}
+
+a:hover,
+a:focus {
+	text-decoration: underline;
+}
+
+.main_menu {
+	/*padding: 5px;*/
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background: #435a6b; /*#f1f1f1;*/
+	color: #fff;
+}
+
+img {
+    /*display: block;*/
+    width: 300px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #666;
+}
+
+.del_dialog {
+	width: 18px;
+	height: 14px;
+    margin: 0px;
+    box-shadow: none;
+}
+
+#avatarka {
+	margin: 0px;
+    width: auto; 
+    height: 100%;
+}
+
+.avatarka {
+	text-align: center;
+	clear: none;
+	max-width: 300px;
+	width: 300px;
+	height: 300px;
+	margin: 0;
+	margin-right: 20px;
+	overflow: hidden;
+	float:left; /* Выравнивание по левому краю */
+	/*margin: 7px 7px 7px 0;  Отступы вокруг картинки */
+}
+
+.under_img {
+	clear: left;
+	max-width: 300px;
+	width: 300px;
+	float:left;
+}
+
+#main_menu_effect {
+	/*position: relative; с этим правилом соседний текст двигается при работе анимации*/ 
+	display: inline-block;
+	/*margin: 5px 10px;*/
+	outline: none;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 400;
+	text-shadow: 0 0 1px rgba(255,255,255,0.3);
+	font-size: 1em;
+}
+
+#main_menu_effect:hover,
+#main_menu_effect:focus {
+	outline: none;
+}
+/* Эффект 1: Скобки */
+#main_menu_effect::before,
+#main_menu_effect::after {
+	display: inline-block;
+	opacity: 0;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.2s;
+	transition: transform 0.3s, opacity 0.2s;
+}
+
+#main_menu_effect::before {
+	margin-right: 10px;
+	content: '[';
+	-webkit-transform: translateX(20px);
+	-moz-transform: translateX(20px);
+	transform: translateX(20px);
+}
+
+#main_menu_effect::after {
+	margin-left: 10px;
+	content: ']';
+	-webkit-transform: translateX(-20px);
+	-moz-transform: translateX(-20px);
+	transform: translateX(-20px);
+}
+
+#main_menu_effect:hover::before,
+#main_menu_effect:hover::after,
+#main_menu_effect:focus::before,
+#main_menu_effect:focus::after {
+	opacity: 1;
+	-webkit-transform: translateX(0px);
+	-moz-transform: translateX(0px);
+	transform: translateX(0px);
+}
+
+#msg_errors {
+	color: red;
+}
+
+#msg_sucses {
+	color: green;
+	opacity: 0;
+	-webkit-animation: flitter 5s ease-in-out .2s 1 normal;
+	-moz-animation: flitter 5s ease-in-out .2s 1 normal;
+	-ms-animation: flitter 5s ease-in-out .2s 1 normal;
+	-o-animation: flitter 5s ease-in-out .2s 1 normal;
+	animation: flitter 5s ease-in-out .2s 1 normal;
+}
+
+@-webkit-keyframes flitter {
+0% {opacity: 0;}50% {opacity: 1;}100% {opacity: 0;}
+}
+@-moz-keyframes flitter {
+0% {opacity: 0;}50% {opacity: 1;}100% {opacity: 0;}
+}
+@-ms-keyframes flitter {
+0% {opacity: 0;}50% {opacity: 1;}100% {opacity: 0;}
+}
+@-o-keyframes flitter {
+0% {opacity: 0;}50% {opacity: 1;}100% {opacity: 0;}
+}
+@keyframes flitter {
+0% {opacity: 0;}50% {opacity: 1;}100% {opacity: 0;}
+}
+
+#form_search {
+	width: 30%;
+	margin-left: 0px;
+	padding-left: 0px;
+}
+
+.main_page_communication {
+	margin: 0px auto;
+	padding: 0px;
+	width: 800px;
+}
+.communication {
+	background: #F4F4F4;
+	clear: none;
+	float: right;
+	padding: 20px;
+	margin: 10px;
+	width: 500px;
+	height: 400px;
+	/*height: 80vh;*/
+	overflow: auto;
+}
+
+.dialogs {
+	background: #F4F4F4;
+	clear: none;
+	float: left;
+	/*float: right;*/
+	padding: 20px;
+	margin: 10px;
+	width: 200px;
+	/*height: 80vh;*/
+	overflow: auto;
+}
+.message1{
+	margin: 20px;
+	margin-left: 150px;
+	padding: 20px;
+	width: 300px;
+	height: auto;
+	background: #7F9EFF;
+}
+.message2{
+	margin: 20px;
+	padding: 20px;
+	width: 300px;
+	height: auto;
+	background: #FDFC9C;
+}
+.write_message {
+	clear: both;
+	width: 780px;
+}
+
+.selected_user_dialog {
+	background: #F0F05D;
+}
+
+/*.fon_pechenka {
+	background: #fff url('images/fon.jpg') 0 0 no-repeat;
+	background-size: cover;
+}*/
+
+.msg_send {
+	background: red;
+	color: #FFF;
+}
+
+.about_me {
+	width: 300px; /* Ширина поля в процентах */
+	height: 100px; /* Высота поля в пикселах */
+	resize: none; /* Запрещаем изменять размер */
+}
+
+.form-control {
+	resize: none;
+}
